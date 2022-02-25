@@ -1,6 +1,7 @@
 package com.camvio.paymentsystem.service;
 
 import com.camvio.paymentsystem.model.Account;
+import com.camvio.paymentsystem.model.PaymentRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
@@ -42,5 +43,10 @@ public class AccountServiceImpl implements AccountService {
         ResponseEntity<String> balance = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
 
         return balance;
+    }
+
+    @Override
+    public ResponseEntity<String> payBalance(PaymentRequest paymentRequest) {
+        return null;
     }
 }
