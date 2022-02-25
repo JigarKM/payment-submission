@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Getting Started: Serving Web Content</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+	<h1>Enter Account ID</h1>
+	<form action="#" th:action="@{/details}" th:object="${account}" method="POST">
+		<p><input type="text" th:field="*{accountNo}" /></p>
+		<p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+	</form>
+
+	<div th:if="${balanceResponse.balance}">
+		<div>Account Balance is : </div>
+		<td th:text="${balanceResponse.balance}" />
+		<br>
+		<br>
+		<br>
+		<div> Submit payment </div>
+		<form action="#" th:action="@{/pay}" th:object="${balanceResponse}" method="POST">
+			<p>Pay : <input type="text" th:field="*{balance}" /></p>
+			<p><input type="hidden" th:field="*{accountId}" /></p>
+			<p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+		</form>
+
+	</div>
+
+	<div th:if="${paymentStatus}">
+		<td th:text="${paymentStatus}" />
+	</div>
+
+
+
+</body>
+
+</html>

@@ -1,15 +1,25 @@
 package com.camvio.paymentsystem.model;
 
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.stereotype.Service;
+public class Account {
 
-import javax.persistence.*;
-import java.io.Serializable;
+	private Integer id;
 
-@Getter
-@Setter
-public class Account implements Serializable {
+	private String accountNo;
 
-    private Integer id;
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getAccountNo() {
+		return accountNo;
+	}
+
+	public void setAccountNo(String accountNo) {
+		this.accountNo = accountNo;
+	}
+
 }

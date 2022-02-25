@@ -1,10 +1,20 @@
 package com.camvio.paymentsystem.service;
 
-import com.camvio.paymentsystem.model.PaymentRequest;
-import org.springframework.http.ResponseEntity;
+import com.camvio.paymentsystem.model.BalanceResponse;
+import com.camvio.paymentsystem.model.PaymentStatus;
+
 
 public interface AccountService {
-    ResponseEntity<String> displayBalance(String accountNumber);
+	
+	/**
+	 * @param accountNumber
+	 * @return
+	 */
+	BalanceResponse displayBalance(String accountNumber);
 
-    ResponseEntity<String> payBalance(PaymentRequest paymentRequest);
+	/**
+	 * @param balanceResponse
+	 * @return
+	 */
+	PaymentStatus payBalance(BalanceResponse balanceResponse);
 }
