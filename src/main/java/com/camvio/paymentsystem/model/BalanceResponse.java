@@ -1,25 +1,13 @@
 package com.camvio.paymentsystem.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class BalanceResponse {
 
-	private String balance;
-
-	private Integer accountId;
-
-	public Integer getAccountId() {
-		return accountId;
-	}
-
-	public void setAccountId(Integer accountId) {
-		this.accountId = accountId;
-	}
-
-	public String getBalance() {
-		return balance;
-	}
-
-	public void setBalance(String balance) {
-		this.balance = balance;
-	}
+    private String balance;
+    private Integer accountId;
 
 }

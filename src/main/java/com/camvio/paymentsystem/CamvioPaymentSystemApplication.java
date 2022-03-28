@@ -10,8 +10,4 @@ public class CamvioPaymentSystemApplication {
 		SpringApplication.run(CamvioPaymentSystemApplication.class, args);
 	}
 
-	// hit
-
-	// http://localhost:8080/account
-
 }

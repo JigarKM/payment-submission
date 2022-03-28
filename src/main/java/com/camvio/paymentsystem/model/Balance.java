@@ -1,27 +1,15 @@
 package com.camvio.paymentsystem.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.math.BigDecimal;
 
+@Getter
+@Setter
 public class Balance {
 
-	private boolean success;
-
-	private BigDecimal balance;
-
-	public boolean isSuccess() {
-		return success;
-	}
-
-	public void setSuccess(boolean success) {
-		this.success = success;
-	}
-
-	public BigDecimal getBalance() {
-		return balance;
-	}
-
-	public void setBalance(BigDecimal balance) {
-		this.balance = balance;
-	}
+    private boolean success;
+    private BigDecimal balance;
 
 }

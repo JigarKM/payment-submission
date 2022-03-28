@@ -1,54 +1,53 @@
 package com.camvio.paymentsystem.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table
 public class PaymentEntity {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long uuid;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long uuid;
+    private boolean success;
+    private int id;
+    private String message;
+    private String referenceId;
 
-	@Column(name = "success")
-	private boolean success;
-	@Column(name = "id")
-	private int id;
-	@Column(name = "message")
-	private String message;
+    public boolean isSuccess() {
+        return success;
+    }
 
-	public boolean isSuccess() {
-		return success;
-	}
+    public void setSuccess(boolean success) {
+        this.success = success;
+    }
 
-	public void setSuccess(boolean success) {
-		this.success = success;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public int getId() {
-		return id;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public String getMessage() {
+        return message;
+    }
 
-	public String getMessage() {
-		return message;
-	}
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
-	public void setMessage(String message) {
-		this.message = message;
-	}
+    public String getReferenceId() {
+        return referenceId;
+    }
 
-	@Override
-	public String toString() {
-		return "PaymentStatus [success=" + success + ", id=" + id + ", message=" + message + "]";
-	}
+    public void setReferenceId(String referenceId) {
+        this.referenceId = referenceId;
+    }
+
+    @Override
+    public String toString() {
+        return "PaymentStatus [success=" + success + ", id=" + id + ", message=" + message + "]";
+    }
 
 }
